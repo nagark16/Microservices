@@ -8,8 +8,8 @@ SOAP have restrictions on format of the XML which is exchanged between client & 
 
 REST stands for Representational State Transfer
 
-Swagger -- documentation format for RESTful services
+* Swagger -- documentation format for RESTful services
 	* http://localhost:8080/v2/api-docs
 	* http://localhost:8080/swagger-ui.html
-Boot actuator -- a monitoring tool
+* Boot actuator -- a monitoring tool
 	* http://localhost:8080/actuator
