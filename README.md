@@ -28,9 +28,9 @@ REST stands for Representational State Transfer
 
 * Microservices: REST + small well chosen deployable units + cloud based
 
-* Microservice challenges:
-		* bounded context -- defining boundaries for each microservice
-		* configuration management -- configuring many microservices in different environments 
-		* dynamic scale up & scale down -- on the fly increase/decrease instances of microservice as per incoming requests
-		* visibility -- need to know what is happening behind microservices as a whole as a functionality can be dividied among many microservices
-		* pack of cards -- whole microservices system depend one on another if one fails whole system falls like pack of cards
+* Microservice challenges
+	* bounded context -- defining boundaries for each microservice
+	* configuration management -- configuring many microservices in different environments 
+	* dynamic scale up & scale down -- on the fly increase/decrease instances of microservice as per incoming requests
+	* visibility -- need to know what is happening behind microservices as a whole as a functionality can be dividied among many microservices
+	* pack of cards -- whole microservices system depend one on another if one fails whole system falls like pack of cards
