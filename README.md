@@ -27,7 +27,8 @@ REST stands for Representational State Transfer
 	* level 3 -- level 2 + HATEOAS -- DATA + Next possible actions
 
 * Microservices: REST + small well chosen deployable units + cloud based
-	##### challenges:
+
+* Microservice challenges:
 		* bounded context -- defining boundaries for each microservice
 		* configuration management -- configuring many microservices in different environments 
 		* dynamic scale up & scale down -- on the fly increase/decrease instances of microservice as per incoming requests
