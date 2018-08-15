@@ -49,3 +49,10 @@ REST stands for Representational State Transfer
 * To enable as a spring cloud config server we should give "@EnableConfigServer"
 * For every microservice we should give "spring.application.name" in application.properties??
 * Any changes to be picked by spring cloud config server should be committed to git	
+* The files to be picked by spring cloud config server as different profiles should suffix as dev or qa (i.e., limits-service-qa.properites, limits-service-dev.properites)
+
+* To access SpringCloudConfigServer
+	1. rename application.properties to bootstrap.properties
+	2. update bootstrap.properties to link spring cloud url (i.e., spring.cloud.config.uri=http://localhost:8888)
+
+* To access specific profiles (i.e., developer, qa), in boostrap.properties add lines like "spring.profiles.active=dev" or "spring.profiles.active=qa"
