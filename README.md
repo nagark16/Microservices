@@ -34,3 +34,18 @@ REST stands for Representational State Transfer
 	* dynamic scale up & scale down -- on the fly increase/decrease instances of microservice as per incoming requests
 	* visibility -- need to know what is happening behind microservices as a whole as a functionality can be dividied among many microservices
 	* pack of cards -- whole microservices system depend one on another if one fails whole system falls like pack of cards
+
+* Spring cloud
+	* for configuration management -- spring cloud config server
+	* for dynamic scale up & scale down -- Eureka(naming server), ribbon(client side load balancing), Feign(Easier REST clients)
+	* for visibility & monitoring -- Zipkin distributed tracing, Netflix API Gateway
+	* for fault tolerance -- Hystrix
+
+* Adv of Microservices
+	* process adaption -- different microservice can be developed in language
+	* dynamic scaling
+	* faster release cycles
+
+* To enable as a spring cloud config server we should give "@EnableConfigServer"
+* For every microservice we should give "spring.application.name" in application.properties??
+* Any changes to be picked by spring cloud config server should be committed to git	
