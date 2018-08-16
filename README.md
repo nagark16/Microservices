@@ -56,3 +56,23 @@ REST stands for Representational State Transfer
 	2. update bootstrap.properties to link spring cloud url (i.e., spring.cloud.config.uri=http://localhost:8888)
 
 * To access specific profiles (i.e., developer, qa), in boostrap.properties add lines like "spring.profiles.active=dev" or "spring.profiles.active=qa"
+
+* In a project we have to add eureka dependency and add annotation of ``` @EnableDiscoveryClient ``` for a project to be added to naming server. Also we have add ``` "eureka.client.service-url.default-zone = http://localhost:8761/eureka" ``` in application.properties of the project
+	```
+	<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+	</dependency>
+	```
+	ribbon will talk to eureka and get running instances
+
+* API gateways -- Zuul API gateway
+	* authentication, authorization and security
+	* rate limits
+	* fault tolerance
+	* serivce aggregation
+
+* 3 steps to setup Zuul server
+	1. create a component
+	2. should decide what it should do when it intercepts a request
+	3. make sure all important requests are getting passed through Zuul API gateway
