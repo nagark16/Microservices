@@ -76,3 +76,15 @@ REST stands for Representational State Transfer
 	1. create a component
 	2. should decide what it should do when it intercepts a request
 	3. make sure all important requests are getting passed through Zuul API gateway
+
+* after deploying zuul application at 8765 we can access other application via 
+	```
+		http://localhost:8765/{application-name}/{uri}															
+		ex: http://localhost:8765/currency-exchange-service/currency-exchange/from/EUR/to/INR       (no captials)
+	```
+
+* Zuul uses app name in the url to talk to Eureka and find the url of the service
+	```
+		http://localhost:8100/currency-converter-feign/from/EUR/to/INR/quantitity/1000
+		http://localhost:8765/currency-conversion-service/currency-converter-feign/from/EUR/to/INR/quantitity/1000
+	```
