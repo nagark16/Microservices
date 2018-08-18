@@ -88,3 +88,20 @@ REST stands for Representational State Transfer
 	http://localhost:8100/currency-converter-feign/from/EUR/to/INR/quantitity/1000
 	http://localhost:8765/currency-conversion-service/currency-converter-feign/from/EUR/to/INR/quantitity/1000
 	```
+
+###### Distributed Tracing 
+* Zipkin -- http://localhost:9411/zipkin
+* assign unique id to each request spring cloud sleuth
+	```<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-sleuth</artifactId>
+	   </dependency>
+	```
+* in server application (i.e., in @SpringBootApplication class file)
+	```	@Bean
+		public Sampler defaultSampler() {
+			return Sampler.ALWAYS_SAMPLE;
+		}
+	```
+* centralized log -- Rabbit MQ, Elastic search, kibana(ELK stack)
+* We can use elastic search to search through consolidated log
