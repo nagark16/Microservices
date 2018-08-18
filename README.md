@@ -92,13 +92,15 @@ REST stands for Representational State Transfer
 ###### Distributed Tracing 
 * Zipkin -- http://localhost:9411/zipkin
 * assign unique id to each request spring cloud sleuth
-	```<dependency>
+	```
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-sleuth</artifactId>
-	   </dependency>
+	   	</dependency>
 	```
 * in server application (i.e., in @SpringBootApplication class file)
-	```	@Bean
+	```	
+		@Bean
 		public Sampler defaultSampler() {
 			return Sampler.ALWAYS_SAMPLE;
 		}
