@@ -107,3 +107,17 @@ REST stands for Representational State Transfer
 	```
 * centralized log -- Rabbit MQ, Elastic search, kibana(ELK stack)
 * We can use elastic search to search through consolidated log
+* to start zipkin: first we have to get zipkin via https://zipkin.io/pages/quickstart
+	* set RABBIT_URI=amqp://localhost
+	* java -jar zipkin-server-2.7.0-exec.jar
+	```
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+		</dependency>
+	```
+	make sure rabbit MQ service is running
