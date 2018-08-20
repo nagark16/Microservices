@@ -121,3 +121,14 @@ REST stands for Representational State Transfer
 		</dependency>
 	```
 	make sure rabbit MQ service is running
+
+###### spring cloud bus 
+* will make all instances of microservices pick latest data
+	```
+	<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+	</dependency>
+	```
+* management.endpoints.web.exposure.include=* -- disables management security
+* to get latest data we have to do POST request from postman with url http://localhost:8080/actuator/bus-refresh
