@@ -122,7 +122,7 @@ REST stands for Representational State Transfer
 	```
 	make sure rabbit MQ service is running
 
-###### spring cloud bus 
+###### Spring Cloud Bus 
 * will make all instances of microservices pick latest data
 	```
 	<dependency>
