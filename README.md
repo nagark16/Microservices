@@ -132,3 +132,15 @@ REST stands for Representational State Transfer
 	```
 * management.endpoints.web.exposure.include=* -- disables management security
 * to get latest data we have to do POST request from postman with url http://localhost:8080/actuator/bus-refresh
+
+###### Hystrix
+* we do fault tolerance with Hystrix 
+* when one of the dependent service is down instead of taking whole system down we can return default behaviour
+		```
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-hystrix</artifactId>
+			</dependency>
+		```
+* in spring boot application enable via @EnableHystrix
+* on all commands in rest controller we can write default behaviour via @HystrixCommand(fallbackMethod="some method name")
