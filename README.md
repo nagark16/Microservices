@@ -136,11 +136,11 @@ REST stands for Representational State Transfer
 ###### Hystrix
 * we do fault tolerance with Hystrix 
 * when one of the dependent service is down instead of taking whole system down we can return default behaviour
-		```
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-starter-hystrix</artifactId>
-			</dependency>
-		```
+	```
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix</artifactId>
+		</dependency>
+	```	
 * in spring boot application enable via @EnableHystrix
 * on all commands in rest controller we can write default behaviour via @HystrixCommand(fallbackMethod="some method name")
