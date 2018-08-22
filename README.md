@@ -125,10 +125,10 @@ REST stands for Representational State Transfer
 ###### Spring Cloud Bus 
 * will make all instances of microservices pick latest data
 	```
-	<dependency>
-		<groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-starter-bus-amqp</artifactId>
-	</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+		</dependency>
 	```
 * management.endpoints.web.exposure.include=* -- disables management security
 * to get latest data we have to do POST request from postman with url http://localhost:8080/actuator/bus-refresh
@@ -144,3 +144,10 @@ REST stands for Representational State Transfer
 	```	
 * in spring boot application enable via @EnableHystrix
 * on all commands in rest controller we can write default behaviour via @HystrixCommand(fallbackMethod="some method name")
+
+###### Microservices characteristics
+	* small, specific functionality
+	* independent deployment
+	* simple communication(HTTP via RestFul)
+	* stateless(so scaled up or down)
+	* automated build and deployment
